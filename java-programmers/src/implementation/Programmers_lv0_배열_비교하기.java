@@ -1,0 +1,34 @@
+package src.implementation;
+
+public class Programmers_lv0_배열_비교하기 {
+
+    public int solution(int[] arr1, int[] arr2) {
+        if (arr1.length < arr2.length) {
+            return -1;
+        }
+
+        if (arr1.length > arr2.length) {
+            return 1;
+        }
+
+        int sum1 = 0;
+        for (int x : arr1) {
+            sum1 += x;
+        }
+
+        int sum2 = 0;
+        for (int x : arr2) {
+            sum2 += x;
+        }
+
+        if (sum1 < sum2) {
+            return -1;
+        }
+
+        if (sum1 > sum2) {
+            return 1;
+        }
+
+        return 0;
+    }
+}
